@@ -32,15 +32,20 @@ class AddTaskScreen extends StatelessWidget {
                 newTaskTitle = value;
               },
             ),
+            const SizedBox(height: 5.0),
             GestureDetector(
                 onTap: () {
                   addTaskCallback(newTaskTitle!);
                 },
-                child: const SizedBox(
-                  child: Text(
-                    'Add',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.lightBlueAccent),
+                child: Container(
+                  color: Colors.lightBlueAccent,
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Add',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 )),
           ],
